@@ -208,20 +208,48 @@
     <div class="form-overlay">
       <div class="form-overlay-inner">
         <form class="form-content">
-          <div class="form-photo">
-            <div class="thank-you">
-              <input
-                type="text"
-                id="name"
-                autocomplete="off"
-                class="form-field"
-              />
-            </div>
-            <div class="form-photo">
-              <p>Thank you for interested in dog name</p>
-            </div>
+          <input
+            type="text"
+            id="Name"
+            placeholder="Name"
+            autocomplete="off"
+            class="form-field"
+          />
+          <input
+            type="text"
+            id="Email Address"
+            autocomplete="off"
+            class="form-field"
+            placeholder="Email Address"
+          />
+          <input
+            placeholder="What is the word for a baby dog"
+            type="text"
+            id="secret"
+            autocomplete="off"
+            class="form-field"
+          />
+
+          <textarea
+            class="form-field"
+            id="comment"
+            placeholder="Comment (optional)"
+          ></textarea>
+          <div class="justify-right">
+            <button class="our-btn" type="submit">Submit</button>
           </div>
+
+          <div class="close-form-overlay">x</div>
         </form>
+
+        <div class="form-photo">
+          <img src="/images/fallback.jpg" alt="A dog and a cat" />
+          <p>
+            Thank you for interested in <br />
+            <strong>dog name</strong>.
+          </p>
+        </div>
+        <div class="thank-you"></div>
       </div>
     </div>
 
