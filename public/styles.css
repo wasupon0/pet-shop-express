@@ -444,14 +444,12 @@ textarea.form-field {
 /* Contact Form Styles */
 
 .form-overlay {
-  align-items: center;
   backdrop-filter: blur(10px);
   background-color: rgb(255, 255, 255, 0.85);
   bottom: 0;
-  display: flex;
-  justify-content: center;
   left: 0;
   opacity: 0;
+  overflow-y: auto;
   position: fixed;
   right: 0;
   top: 0;
@@ -473,15 +471,42 @@ textarea.form-field {
   box-shadow: 0px 0px 10px 5px rgb(0, 0, 0, 0.1);
   display: grid;
   flex: 1;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 1fr;
   margin: 16px;
   max-width: 880px;
+  position: relative;
 }
 
 .form-photo {
   grid-row: 1;
+  height: 200px;
   order: 1;
   position: relative;
+}
+
+.form-content {
+  padding: 38px 30px;
+}
+
+@media screen and (min-width: 745px) {
+  .form-overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-content {
+    padding: 38px 54px;
+    position: relative;
+  }
+
+  .form-overlay-inner {
+    grid-template-columns: 340px 1fr;
+  }
+
+  .form-photo {
+    height: auto;
+  }
 }
 
 .form-photo p {
@@ -518,11 +543,6 @@ textarea.form-field {
   justify-content: flex-end;
 }
 
-.form-content {
-  padding: 38px 54px;
-  position: relative;
-}
-
 .close-form-overlay {
   color: grey;
   cursor: pointer;
@@ -532,6 +552,7 @@ textarea.form-field {
   right: 12px;
   top: 0;
   transform: scaleX(1.2);
+  z-index: 101;
 }
 
 .close-form-overlay:hover {
@@ -553,4 +574,66 @@ textarea.form-field {
 
 .pet-contact-btn:hover {
   opacity: 1;
+}
+
+.thank-you {
+  align-content: center;
+  background-color: white;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+  z-index: 102;
+}
+
+.thank-you--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thank-you p {
+  align-self: center;
+  font-size: 1.4rem;
+}
+
+.thank-you svg {
+  color: rgb(0, 185, 0);
+  margin-right: 4px;
+  position: relative;
+  top: 4px;
+}
+
+.contact-list {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.contact-list th,
+.contact-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+  vertical-align: top;
+}
+
+.contact-list th {
+  color: gray;
+  font-size: 0.8;
+  font-weight: normal;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.contact-list td {
+  font-size: 1rem;
+}
+
+.contact-list tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

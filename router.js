@@ -44,5 +44,10 @@ router.post(
 
 // contact related routes
 router.post("/submit-contact", contactController.submitContact);
+router.get(
+  "/admin/view-pet-contacts/:id",
+  petController.onlyAdmin,
+  contactController.viewPetContacts
+);
 
 module.exports = router;
