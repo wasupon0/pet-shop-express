@@ -173,7 +173,11 @@
             <div class="pet-card-text">
               <h3>
                 <span class="pet-name"> <%= pet.name %> </span>
-                <button onclick="openOverlay(this)" class="pet-contact-btn">
+                <button
+                  data-id="<%= pet._id  %>"
+                  onclick="openOverlay(this)"
+                  class="pet-contact-btn"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -228,14 +232,14 @@
         <form class="form-content">
           <input
             type="text"
-            id="Name"
+            id="name"
             placeholder="Name"
             autocomplete="off"
             class="form-field"
           />
           <input
             type="text"
-            id="Email Address"
+            id="email"
             autocomplete="off"
             class="form-field"
             placeholder="Email Address"
@@ -264,7 +268,7 @@
           <img src="/images/fallback.jpg" alt="A dog and a cat" />
           <p>
             Thank you for interested in <br />
-            <strong>dog name</strong>.
+            <strong>dog name</strong>
           </p>
         </div>
         <div class="thank-you"></div>

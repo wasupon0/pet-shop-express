@@ -57,6 +57,7 @@ body {
   border: 2px solid #475aff;
   border-radius: 1000px;
   color: #fff;
+  cursor: pointer;
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 600;
@@ -69,6 +70,10 @@ body {
 .our-btn:hover {
   background-color: #2e40e2;
   border: 2px solid #2e40e2;
+}
+
+.our-btn:active {
+  outline: 3px solid orange;
 }
 
 .our-btn--outline {
@@ -496,6 +501,7 @@ textarea.form-field {
 
 .form-photo p strong {
   color: black;
+  display: block;
   font-size: 2.25rem;
   font-weight: normal;
 }
